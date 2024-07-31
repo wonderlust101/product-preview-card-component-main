@@ -2,6 +2,7 @@
 
 .card {
   display: grid;
+  justify-items: center;
   grid-template-columns: 1fr;
   width: 90%;
   background-color: white;
@@ -13,7 +14,9 @@
   }
 
   &__image {
+    width: 100%;
     border-radius: 0.625rem 0.625rem 0 0;
+    filter: brightness(0.95);
 
     @include a.breakpoint(medium) {
       content: url('../../images/image-product-desktop.jpg');
@@ -36,6 +39,10 @@
 
     &--overline {
       @include a.typography(overline);
+    }
+
+    &--title {
+      margin-top: 1.25rem;
     }
   }
 
