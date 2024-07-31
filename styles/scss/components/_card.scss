@@ -1,0 +1,56 @@
+@use '../abstract' as a;
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 90%;
+  background-color: white;
+  border-radius: 0.625rem;
+
+  @include a.breakpoint(medium) {
+    grid-template-columns: 1fr 1fr;
+    width: 37.5rem;
+  }
+
+  &__image {
+    border-radius: 0.625rem 0.625rem 0 0;
+
+    @include a.breakpoint(medium) {
+      content: url('../../images/image-product-desktop.jpg');
+      border-radius: 0.625rem 0 0 0.625rem;
+    }
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+
+    & > * + * {
+      margin-top: 1.5rem;
+
+      @include a.breakpoint(medium) {
+        margin-top: auto;
+      }
+    }
+
+    &--overline {
+      @include a.typography(overline);
+    }
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+
+    &--display-green-display {
+      @include a.typography(display);
+      color: var(--clr-accent-color-400);
+    }
+
+    &--line-through {
+      text-decoration: line-through;
+    }
+  }
+}

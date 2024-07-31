@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+// Colors
+$colors: (
+  // Main Colors
+        accent-color: (
+                400: #3d8168,
+                900: #1a4032
+        ),
+  // Text Color
+        display: #1c232b,
+        body: #1c232b,
+        button-text: #ffffff,
+        overline: #6c7289,
+  // Other
+        background: #f2eae2,
+        white: #ffffff,
+);
+
+// Breakpoints
+$breakpoints: (
+        medium: 41.25rem
+);
+
+$typography: (
+        display: (
+                font-family: '"Fraunces", serif',
+                font-size: 2rem,
+                font-weight: 700,
+                line-height: 1.0,
+                color: var(--clr-display)
+        ),
+        body: (
+                font-family: '"Montserrat", sans-serif',
+                font-size: 0.875rem,
+                line-height: 1.5,
+                color: var(--clr-body)
+        ),
+        button-text: (
+                font-family: '"Montserrat", sans-serif',
+                font-size: 0.875rem,
+                font-weight: 700,
+                line-height: 1.0,
+                color: var(--clr-button-text)
+        ),
+        overline: (
+                font-family: '"Montserrat", sans-serif',
+                font-size: 0.75rem,
+                line-height: 1.0,
+                letter-spacing: 0.3125rem,
+                text-transform: uppercase,
+                color: var(--clr-overline),
+        )
+);

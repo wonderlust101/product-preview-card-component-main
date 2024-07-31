@@ -1,0 +1,34 @@
+@use 'variables' as v;
+
+// Get the map of the colors in _variables.scss and put is in r0ot
+@mixin color-map-to-root($map) {
+  :root {
+    @each $key, $value in $map {
+      @if type-of($value) == 'map' { // nested map
+        @each $inner-key, $inner-value in $value {
+          --clr-#{$key}-#{$inner-key}: #{$inner-value};
+        }
+      } @else { // map
+        --clr-#{$key}: #{$value};
+      }
+    }
+  }
+  @content;
+}
+
+// Gets the property of a typography map in _variables.scss and returns the key, value properties in css
+@mixin typography($style) {
+  $properties: map-get(v.$typography, $style);
+
+  @each $key, $value in $properties {
+    #{$key}: #{$value};
+  }
+}
+
+// Sets the breakpoint of the page based on key, value pair in a map in _variables.scss
+@mixin breakpoint($size) {
+  @media (min-width: map-get(v.$breakpoints, $size)) {
+    @content
+  }
+}
+

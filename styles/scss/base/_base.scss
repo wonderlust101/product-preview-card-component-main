@@ -1,0 +1,16 @@
+@use '../abstract' as a;
+
+@include a.color-map-to-root(a.$colors){
+}
+
+body {
+  background-color: var(--clr-background);
+}
+
+h1 {
+  @include a.typography(display);
+}
+
+p {
+  @include a.typography(body)
+}
