@@ -2,9 +2,9 @@
 
 .card {
   display: grid;
-  justify-items: center;
   grid-template-columns: 1fr;
   width: 90%;
+  overflow: hidden;
   background-color: white;
   border-radius: 0.625rem;
 
@@ -13,37 +13,13 @@
     width: 37.5rem;
   }
 
-  &__image {
-    width: 100%;
-    height: 100%;
-    border-radius: 0.625rem 0.625rem 0 0;
-    filter: brightness(0.95);
-
-    @include a.breakpoint(medium) {
-      content: url('../../images/image-product-desktop.webp');
-      border-radius: 0.625rem 0 0 0.625rem;
-    }
-  }
-
   &__details {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    gap: 1.62rem;
     padding: 2rem;
-
-    & > * + * {
-      margin-top: 1.5rem;
-
-      @include a.breakpoint(medium) {
-        margin-top: auto;
-      }
-    }
 
     &--overline {
       @include a.typography(overline);
-    }
-
-    &--title {
-      margin-top: 1.25rem;
     }
   }
 
@@ -55,10 +31,6 @@
     &--green-display {
       @include a.typography(display);
       color: var(--clr-accent-color-400);
-    }
-
-    &--line-through {
-      text-decoration: line-through;
     }
   }
 }
