@@ -1,9 +1,9 @@
-@use '../abstract' as a;
+@use '../abstract/index' as a;
 
 @include a.color-map-to-root(a.$colors){
 }
 
-body {
+#root {
   background-color: var(--clr-background);
 }
 

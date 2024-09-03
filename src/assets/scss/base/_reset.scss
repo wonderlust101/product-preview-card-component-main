@@ -22,7 +22,7 @@ ol[role='list'] {
   list-style: none;
 }
 
-body {
+body, #root  {
   min-height: 100vh;
   line-height: calc(1em + 0.5rem);
   -webkit-font-smoothing: antialiased;

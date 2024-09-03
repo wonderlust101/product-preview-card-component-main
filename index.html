@@ -1,40 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A website that display a product card that allows the user to add the item to their card">
 
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-    <link rel="stylesheet" href="styles/css/main.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
 
     <title>Frontend Mentor | Product preview card component</title>
 </head>
 <body>
-    <main class="card">
-        <picture>
-            <source srcset="images/image-product-desktop.webp" media="(min-width:41.25rem)">
-            <img src="images/image-product-mobile.webp" alt="Perfume Image" class="card__image">
-        </picture>
-
-        <section class="card__details">
-            <p class="card__details--overline">Perfume</p>
-
-            <h1 class="card__details--title">Gabrielle Essence Eau De Parfum</h1>
-
-            <p>A floral, solar and voluptuous interpretation composed by Olivier Polge,
-                Perfumer-Creator for the House of CHANEL.</p>
-
-            <div class="card__price">
-                <p class="card__price--green-display">$149.99</p>
-                <p class="card__price--line-through"><s>$169.99</s></p>
-            </div>
-
-            <button class="button">
-                <img src="images/icon-cart.svg" alt="Cart Icon" class="button__icon">
-                <span class="button__label">Add to Cart</span>
-            </button>
-        </section>
-    </main>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
 </body>
 </html>
